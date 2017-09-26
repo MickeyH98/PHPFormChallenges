@@ -45,7 +45,9 @@ require "./lib/inc/db.inc.php";
     </div>
   </form>
   <?php
-    $color = $_POST["color"];
+    if($_POST["color"]){
+      $color = $_POST["color"];
+    };
     echo "<div class='" . strtolower($color) . "Products'>";
     echo "<style>body .form{background: linear-gradient(to bottom, white, $color);}</style>";
     if($color){
