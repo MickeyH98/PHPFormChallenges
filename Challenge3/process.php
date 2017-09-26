@@ -4,7 +4,7 @@ require "./lib/inc/db.inc.php";
   if($_POST["name"]){
       try {
         $sql = $db->prepare(
-          "INSERT INTO Products (Name, Description, Price)
+          "INSERT INTO Products2 (Name, Description, Price)
           VALUES (:name, :description, :price)"
         );
         $result = $sql->execute(
@@ -20,7 +20,7 @@ require "./lib/inc/db.inc.php";
   try {
     $sql = $db->prepare(
       "SELECT Name, Description, Price
-      FROM Products");
+      FROM Products2");
     $sql->execute();
     $result = $sql->fetchAll();
   } catch (PDOException $e) {
