@@ -1,7 +1,7 @@
 <?php
 require "./lib/inc/db.inc.php";
 
-  if($_POST["name"]){
+  if(!empty($_POST["name"])){
       try {
         $sql = $db->prepare(
           "INSERT INTO Products2 (Name, Description, Price)

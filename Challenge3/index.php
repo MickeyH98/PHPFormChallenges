@@ -70,6 +70,7 @@
       "description" : $("#productdescription").val(),
       "price" : $("#productprice").val()
     });
+    //clear input fields
     $("#productname").val('');
     $("#productdescription").val('');
     $("#productprice").val('');
