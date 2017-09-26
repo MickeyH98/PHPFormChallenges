@@ -77,6 +77,8 @@ require "./lib/inc/db.inc.php";
       }
 
     echo "</div>";
+  }else {
+    echo "";
   }
   ?>
 </body>
