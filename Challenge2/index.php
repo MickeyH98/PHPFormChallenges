@@ -11,9 +11,9 @@ require "./lib/inc/db.inc.php";
 </head>
 <body>
   <ul>
-    <li><a  href="http://localhost:8888/phpformchallenges/Challenge1/index.php">Challenge 1</a></li>
-    <li><a class="selected" href="http://localhost:8888/phpformchallenges/Challenge2/index.php">Challenge 2</a></li>
-    <li><a href="http://localhost:8888/phpformchallenges/Challenge3/index.php">Challenge 3</a></li>
+    <li><a href="http://mhernandez.road2hire.ninja/PHPFormChallenges/Challenge1/">Challenge 1</a></li>
+    <li><a class="selected" href="http://mhernandez.road2hire.ninja/PHPFormChallenges/Challenge2/">Challenge 2</a></li>
+    <li><a href="http://mhernandez.road2hire.ninja/PHPFormChallenges/Challenge3/">Challenge 3</a></li>
   </ul>
   <h1>Challenge 2</h1>
   <form action="index.php" method="post" class="form">
