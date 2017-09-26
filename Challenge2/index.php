@@ -45,7 +45,7 @@ require "./lib/inc/db.inc.php";
     </div>
   </form>
   <?php
-    if($_POST["color"]){
+    if($_POST["Submit"]){
       $color = $_POST["color"];
 
       echo "<div class='" . strtolower($color) . "Products'>";
@@ -77,8 +77,6 @@ require "./lib/inc/db.inc.php";
       }
 
     echo "</div>";
-  }else {
-    echo "";
   }
   ?>
 </body>
