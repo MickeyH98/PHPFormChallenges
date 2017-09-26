@@ -47,37 +47,37 @@ require "./lib/inc/db.inc.php";
   <?php
     if($_POST["color"]){
       $color = $_POST["color"];
-    };
-    echo "<div class='" . strtolower($color) . "Products'>";
-    echo "<style>body .form{background: linear-gradient(to bottom, white, $color);}</style>";
-    if($color){
-      echo "<h2>$color Products:</h2>";
 
-    }
-    try {
-      $sql = $db->prepare(
-        "SELECT Name, Description, Price
-        FROM Products
-        WHERE Color = :color"
-      );
-      $sql->execute(["color" => $color]);
-      $result = $sql->fetchAll();
+      echo "<div class='" . strtolower($color) . "Products'>";
+      echo "<style>body .form{background: linear-gradient(to bottom, white, $color);}</style>";
+      if($color){
+        echo "<h2>$color Products:</h2>";
 
-    } catch (PDOException $e) {
-      echo $e->getMessage();
-    }
-    foreach($result as $name){
-    ?>
-    <div class="product">
-      <p> Name: <?= $name["Name"] ?> </p>
-      <p> Description: <?= $name["Description"] ?> </p>
-      <p> Price: $<?= $name["Price"] ?> </p>
-    </div>
-    <?php
-    }
+      }
+      try {
+        $sql = $db->prepare(
+          "SELECT Name, Description, Price
+          FROM Products
+          WHERE Color = :color"
+        );
+        $sql->execute(["color" => $color]);
+        $result = $sql->fetchAll();
+
+      } catch (PDOException $e) {
+        echo $e->getMessage();
+      }
+      foreach($result as $name){
+      ?>
+      <div class="product">
+        <p> Name: <?= $name["Name"] ?> </p>
+        <p> Description: <?= $name["Description"] ?> </p>
+        <p> Price: $<?= $name["Price"] ?> </p>
+      </div>
+      <?php
+      }
 
     echo "</div>";
-
+  }
   ?>
 </body>
 </html>
